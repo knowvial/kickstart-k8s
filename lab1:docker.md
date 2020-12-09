@@ -38,10 +38,9 @@ docker build -t my-web-app .
 docker images
 ```
 
-> Create two containers from the image. Container is an instance of the image.
+> Create a container from the image. Container is an instance of the image.
 ```
 docker run -d --name my-web-app1 -p 80:80 my-web-app
-docker run -d --name my-web-app2 -p 3001:80 my-web-app
 docker ps
 ```
 > Check the website by clicking "+" button next to "Terminal" and select "View HTTP port 80 on Host 1"
