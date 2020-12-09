@@ -8,7 +8,7 @@ In this lab, you will learn how to
 - Check container statistics
 - Navigate inside container and execute commands
 
-> Go to https://www.katacoda.com/courses/docker/2
+> We will use Katacoda to run this lab. Go to https://www.katacoda.com/courses/container-runtimes/what-is-a-container. Execute the following commands in the terminal.
 
 > Run the following command to create a HTML page
 ```
