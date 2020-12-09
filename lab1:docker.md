@@ -14,15 +14,8 @@ In this lab, you will learn how to
 ```
 cat <<EOF > index.html
 <html>
-  <head>
-    <title>My first docker app</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/3.5.1/build/cssreset/cssreset-min.css">    
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/knowvial/kickstart-k8s/main/resources/styles.css">
-  </head>
   <body>
-      <section id="header">Kickstart K8s in a day</section>
-      <section id="main">This is a sample static website.</section>
-      <section id="footer">Visit us at https://bigdatatrunk.com/</section>
+      <div>Welcome to Kickstart K8s in a day!</div>
   </body>
 </html>
 EOF
@@ -47,10 +40,12 @@ docker images
 
 > Create two containers from the image. Container is an instance of the image.
 ```
-docker run -d --name my-web-app1 my-web-app
-docker run -d --name my-web-app2 my-web-app
+docker run -d --name my-web-app1 -p 80:80 my-web-app
+docker run -d --name my-web-app2 -p 3001:80 my-web-app
 docker ps
 ```
+
+> Check the website
 
 > Execute commands inside one of the containers.
 ```
