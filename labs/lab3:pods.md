@@ -7,7 +7,7 @@ Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the
 kubectl run nginx --image=nginx --port=80
 ```
 
-> Explore
+> Explore and delete
 ```
 kubectl get pods
 kubectl get pods -o wide
