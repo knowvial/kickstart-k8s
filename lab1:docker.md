@@ -54,8 +54,13 @@ ls
 exit
 ```
 
-> Optional: upload the docker image to Docker Hub. 
+| Optional: upload the docker image to Docker Hub. 
 > Signup on https://hub.docker.com/.
+> Enter user id annd password when prompted
+```
+docker login
+```
+> Tag the image and upload to Docker Hub (Container registry) 
 ```
 docker tag my-web-app <docker-hub-user-name>/my-web-app
 ```
