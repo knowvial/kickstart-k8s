@@ -22,6 +22,19 @@ kubectl rollout undo deployment/my-web-dep
 ```
 
 > Upgrade and rollaback to a specific version
+```
 kubectl set image deployment/my-web-dep nginx=nginx:1.19.5 --record
+
+kubectl get pods -o jsonpath --template='{range .items[*]}{.metadata.name}{"\t"}{"\t"}{.spec.containers[0].image}{"\n"}{end}'
+
 kubectl rollout undo deployment/my-web-dep --to-revision=0
+```
+
+> Pause and resume
+```
+kubectl rollout pause deployment/my-web-dep
+
+kubectl get pods -o jsonpath --template='{range .items[*]}{.metadata.name}{"\t"}{"\t"}{.spec.containers[0].image}{"\n"}{end}'
+
+kubectl rollout resume deployment/my-web-dep
 ```
