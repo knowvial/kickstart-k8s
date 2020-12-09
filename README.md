@@ -3,7 +3,6 @@
 ## Preparation
 > Sign-up https://www.katacoda.com/
 
-## Lab 1: Docker
 | Labs  | Topic           | Link  |
 | ----- |-------------| -----|
 | Lab 1 | Explore docker | [link](labs/lab1:docker.md) |
