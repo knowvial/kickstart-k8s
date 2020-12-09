@@ -157,7 +157,6 @@ kubectl get hpa -w
 ```
 sudo apt install siege
 siege -t2M -c100 http://<cluster-ip>
-
 ```
 
 > Watch if new pods are created from the first terminal.
