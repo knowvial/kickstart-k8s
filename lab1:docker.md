@@ -47,14 +47,14 @@ docker ps
 > Check the website by clicking "+" button next to "Terminal" and select "View HTTP port 80 on Host 1"
 !(/images/lab1-1.jpg)
 
-> Execute commands inside one of the containers.
+## Execute commands inside one of the containers.
 ```
 docker exec -it my-web-app1 /bin/bash
 ls
 exit
 ```
 
-| Optional: upload the docker image to Docker Hub. 
+## Optional: upload the docker image to Docker Hub. 
 > Signup on https://hub.docker.com/.
 > Enter user id annd password when prompted
 ```
