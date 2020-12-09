@@ -9,7 +9,7 @@ cat <<EOF > dep.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-web-dep
+  name: my-web-app
   labels:
     app: k8s-class
 spec:
@@ -44,7 +44,6 @@ kubectl expose deployment my-web-app --type=ClusterIP --name=my-web-service --po
 > You can get "pod-ip-address" from `kubectl get pod -o wide` command.
 > You can get "cluster-ip-address" from `kubectl get svc -o wide` command.
 ```
-Explore Services 
 kubectl get services
 kubectl get svc
 kubectl get svc -o wide
@@ -59,11 +58,12 @@ curl http://my-web-service
 > Explore endpoints. Endpoints are backend to Services. One end point is created for each Pod the service is serving. 
 ```
 kubectl get endpoints
+kubectl get ep
 ```
 
 > Delete service
 ```
-kubectl delete svc my-web-app
+kubectl delete svc my-web-service
 ```
 
 ## Declarative way: Create a ClusterIP service 
@@ -117,7 +117,10 @@ curl http://my-web-service
 
 > Check http://<node-public-ip>:<node-port>
 > You can get "node-port" from `kubectl get svc my-web-service` "<node-port>:80"
-> In Katacoda click ""
+> Check the website by clicking "Dashboard" tab as shown below and enter the node-port value.
+![Opening web app](images/lab5-1.png)
+> You can now access the web app externally.
+![Opening web app](images/lab5-2.png)
 
 > Delete service
 ```
