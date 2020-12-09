@@ -124,13 +124,13 @@ curl http://my-web-service
 
 > Delete service
 ```
-kubectl delete svc my-web-app
+kubectl delete svc my-web-service
 ```
 
 ## Declarative way: Create a NodePort service 
 > Create a service manifest file
 ```
-cat <<EOF > service.yml
+cat <<EOF > service2.yml
 apiVersion: v1
 kind: Service
 metadata:
@@ -149,7 +149,7 @@ EOF
 
 > Create service
 ```
-kubectl apply -f service.yml
+kubectl apply -f service2.yml
 ```
 
 > Explore service
