@@ -2,7 +2,7 @@
 > Go to https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster. Enter the following commands in the terminal.
 Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the following links in a new browser tab.
 
-> Imperative way: create a pod 
+## Imperative way: create a pod 
 ```
 kubectl run nginx --image=nginx --port=80
 ```
@@ -15,10 +15,14 @@ Kubectl logs <pod-name>
 kubectl exec -it <pod-name> -- /bin/sh
 kubectl describe pod <pod-name>
 kubectl get pods <pod-name> -o yaml
+```
+
+> Delete Pod
+```
 kubectl delete pod <pod-name>
 ```
 
-> Declarative way: create a pod
+## Declarative way: create a pod
 ```
 cat <<EOF > pod.yml
 apiVersion: v1
@@ -39,5 +43,9 @@ kubectl apply -f pod.yml
 > Explore and delete
 ```
 kubectl get pods -o wide
+```
+
+> Delete Pod
+```
 kubectl delete pod <pod-name>
 ```
