@@ -117,13 +117,14 @@ curl http://my-web-service
 
 > Check http://<node-public-ip>:<node-port>
 > You can get "node-port" from `kubectl get svc my-web-service` "<node-port>:80"
+> In Katacoda click ""
 
 > Delete service
 ```
 kubectl delete svc my-web-app
 ```
 
-## Declarative way: Create a ClusterIP service 
+## Declarative way: Create a NodePort service 
 > Create a service manifest file
 ```
 cat <<EOF > service.yml
@@ -132,12 +133,14 @@ kind: Service
 metadata:
   name: my-web-service
 spec:
+  type: NodePort
   selector:
     app: my-web-app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 30001
 EOF
 ```
 
