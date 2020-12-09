@@ -3,6 +3,8 @@
 Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the following links in a new browser tab.
 
 ## Imperative way: create a pod 
+
+> Run the following command to create a Pod.
 ```
 kubectl run nginx --image=nginx --port=80
 ```
@@ -23,6 +25,7 @@ kubectl delete pod <pod-name>
 ```
 
 ## Declarative way: create a pod
+> Create a pod manifest file.
 ```
 cat <<EOF > pod.yml
 apiVersion: v1
@@ -36,7 +39,10 @@ spec:
     ports:
     - containerPort: 80
 EOF
+```
 
+> Create pod using the above manifest file.
+```
 kubectl apply -f pod.yml
 ```
 
