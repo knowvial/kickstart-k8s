@@ -12,11 +12,11 @@ kubectl create deployment my-web-dep --image=nginx
 ```
 kubectl get deploy
 kubectl get deploy -o wide
-kubectl describe deploy <deploy-name>
+kubectl describe deploy my-web-dep
 kubectl get deploy -n kube-system
 kubectl get pods -o wide
 ```
-> Install command line browser
+> Install command line browser. Get "pod-ip-address" from `kubectl get pods -o wide` command.
 ```
 sudo apt-get install lynx
 lynx http://<pod-ip-address>:80
@@ -68,4 +68,14 @@ kubectl get deploy -o wide
 > Delete deployment
 ```
 kubectl delete deploy my-web-dep
+```
+
+## Explore Replicaset
+> Run the following commands to explore Replicasets. 
+> Get "pod-name" from `kubectl get pods` command.
+```
+kubectl get replicasets
+kubectl get rs,deploy,pods -o wide
+kubectl delete pod <pod-name>
+kubectl get rs,deploy,pods -o wide
 ```
