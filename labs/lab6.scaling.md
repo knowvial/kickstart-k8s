@@ -1,4 +1,4 @@
-# Creating and Exploring Services and Endpoints
+# Scaling deployments
 > Go to https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster. Enter the following commands in the terminal.
 Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the following links in a new browser tab.
 
@@ -160,9 +160,4 @@ kubectl get svc -o wide
 > Delete service
 ```
 kubectl delete svc my-web-service
-```
-
-> Delete deployment
-```
-kubectl delete deploy my-web-app
 ```
