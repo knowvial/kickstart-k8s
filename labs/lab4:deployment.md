@@ -70,7 +70,7 @@ kubectl get deploy -o wide
 kubectl delete deploy my-web-dep
 ```
 
-## Explore Replicaset
+## Replicasets
 > Run the following commands to explore Replicasets. 
 > Get "pod-name" from `kubectl get pods` command.
 ```
