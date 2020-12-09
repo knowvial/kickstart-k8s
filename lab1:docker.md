@@ -47,7 +47,7 @@ docker ps
 
 ![Opening web app](images/lab1-1.png)
 
-## Execute commands inside one of the containers.
+## Optional: Execute commands inside one of the containers.
 ```
 docker exec -it my-web-app1 /bin/bash
 ls
