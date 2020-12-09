@@ -54,7 +54,7 @@ ls
 exit
 ```
 
-## Optional: upload the docker image to Docker Hub. 
+## Optional: Upload the docker image to Docker Hub. 
 > Signup on https://hub.docker.com/.
 > Enter user id annd password when prompted
 ```
