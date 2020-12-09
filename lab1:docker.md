@@ -45,7 +45,7 @@ docker ps
 ```
 > Check the website by clicking "+" button next to "Terminal" and select "View HTTP port 80 on Host 1"
 
-![Opening web app](images/lab1-1.jpg)
+![Opening web app](images/lab1-1.png)
 
 ## Execute commands inside one of the containers.
 ```
