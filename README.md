@@ -5,7 +5,7 @@
 
 ## Lab 1: Docker
 | Labs  | Topic           | Link  |
-| ----- |-------------| -----:|
+| ----- |-------------| -----|
 | Lab 1 | Explore docker | [link](labs/lab1:docker.md) |
 | Lab 2 | Introduction to Yaml | [link](https://yaml-online-parser.appspot.com/) |
 | Lab 3 | Pods      |    [link](labs/lab3:pods.md) |
