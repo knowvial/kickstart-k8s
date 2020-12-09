@@ -62,5 +62,7 @@ docker login
 ```
 > Tag the image and upload to Docker Hub (Container registry) 
 ```
-docker tag my-web-app <docker-hub-user-name>/my-web-app
+docker tag my-web-app <docker-hub-user-name>/my-web-app:latest
+docker push <docker-hub-user-name>/my-web-app:latest
 ```
+> Check if the image is uploaded successfully https://hub.docker.com/repository/docker/<docker-hub-user-name>/my-web-app
