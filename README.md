@@ -4,8 +4,8 @@
 > Sign-up https://www.katacoda.com/
 
 ## Labs
-> Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the following links in a new browser tab.
----
+Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the following links in a new browser tab.
+
 | Labs  | Topic           | Link  |
 | ----- |-------------| -----|
 | Lab 1 | Explore docker | [link](labs/lab1:docker.md) |
