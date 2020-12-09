@@ -23,7 +23,7 @@ Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the
 | ----- | --------- | -------- | ---------- | ------ |
 | Kubernetes Documentation|kubernetes.io (community) | origin | No | [link](https://kubernetes.io/docs/home/)|
 | Learn Kubernetes using Interactive Browser-Based Scenarios | By Katacoda | Interactive | No | [link](https://www.katacoda.com/courses/kubernetes) |
-| Kubernetes The Hard Way | Github | Github | No | [link](https://github.com/kelseyhightower/kubernetes-the-hard-way)|
+| Kubernetes The Hard Way | Kelsey Hightower | Github | No | [link](https://github.com/kelseyhightower/kubernetes-the-hard-way)|
 | Kubernetes Beginner’s Guide: Learning the basics in an hour | Anthony Chow | Intro | No | [link](https://www.weave.works/kubernetes-beginners-guide/) |
 | Kubernetes Bootcamp | Container Solutions & Remember to Play | Interactive | No | [link](https://kubernetesbootcamp.github.io/kubernetes-bootcamp/) |
 | Kubernetes Production Patterns | Gravitational team | Patterns |  | [link](https://github.com/gravitational/workshop/blob/master/k8sprod.md) |
