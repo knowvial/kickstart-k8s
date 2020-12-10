@@ -66,3 +66,11 @@ docker tag my-web-app <docker-hub-user-name>/my-web-app:latest
 docker push <docker-hub-user-name>/my-web-app:latest
 ```
 > Check if the image is uploaded successfully https://hub.docker.com/repository/docker/<docker-hub-user-name>/my-web-app
+
+## Optional: Sample commands for pushing images to AWS ECR
+```
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 366429520411.dkr.ecr.us-east-1.amazonaws.com
+docker build -t k8s-class .
+docker tag k8s-class:latest 366429520411.dkr.ecr.us-east-1.amazonaws.com/k8s-class:latest
+docker push 366429520411.dkr.ecr.us-east-1.amazonaws.com/k8s-class:latest
+```
