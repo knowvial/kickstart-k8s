@@ -34,10 +34,27 @@ EOF
 kubectl apply -f dep.yml
 ```
 
-## Imperative way: Create a ClusterIP service 
-> Run the following command to create a cluster ip service
+## Declarative way: Create a ClusterIP service 
+> Create a service manifest file
+```yaml
+cat <<EOF > service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-web-service
+spec:
+  selector:
+    app: my-web-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+EOF
 ```
-kubectl expose deployment my-web-app --type=ClusterIP --name=my-web-service --port=80 --target-port=80
+
+> Create service
+```
+kubectl apply -f service.yml
 ```
 
 > Explore Cluster ip services
@@ -65,67 +82,8 @@ kubectl get ep
 ```
 kubectl delete svc my-web-service
 ```
-
-## Declarative way: Create a ClusterIP service 
-> Create a service manifest file
-```yaml
-cat <<EOF > service.yml
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-web-service
-spec:
-  selector:
-    app: my-web-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-EOF
-```
-
-> Create service
-```
-kubectl apply -f service.yml
-```
-
-> Explore service
-```
-kubectl get svc -o wide
-```
-
-> Delete service
-```
-kubectl delete svc my-web-service
-```
-
 --- 
 
-## Imperative way: Create a NodePort service 
-> Run the following command to create a cluster ip service
-```
-kubectl expose deployment my-web-app --type=NodePort --name=my-web-service --port=80 --target-port=80
-```
-
-> Explore Cluster ip services
-> You can get "pod-ip-address" from `kubectl get pod -o wide` command.
-> You can get "cluster-ip-address" from `kubectl get svc -o wide` command.
-```
-kubectl get services my-web-service
-curl http://my-web-service
-```
-
-> Check http://<node-public-ip>:<node-port>
-> You can get "node-port" from `kubectl get svc my-web-service` "<node-port>:80"
-> Check the website by clicking "Dashboard" tab as shown below and enter the node-port value.
-![Opening web app](images/lab5-1.png)
-> You can now access the web app externally.
-![Opening web app](images/lab5-2.png)
-
-> Delete service
-```
-kubectl delete svc my-web-service
-```
 
 ## Declarative way: Create a NodePort service 
 > Create a service manifest file
@@ -156,6 +114,14 @@ kubectl apply -f service2.yml
 ```
 kubectl get svc -o wide
 ```
+
+
+> Check http://<node-public-ip>:<node-port>
+> You can get "node-port" from `kubectl get svc my-web-service` "<node-port>:80"
+> Check the website by clicking "Dashboard" tab as shown below and enter the node-port value.
+![Opening web app](images/lab5-1.png)
+> You can now access the web app externally.
+![Opening web app](images/lab5-2.png)
 
 > Delete service
 ```
