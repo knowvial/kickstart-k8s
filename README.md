@@ -9,7 +9,7 @@ Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the
 | Labs  | Topic           | Link  |
 | ----- |-------------| -----|
 | Lab 1 | Explore docker | [link](labs/lab1:docker.md) |
-| Lab 2 | Introduction to Yaml | [link](https://yaml-online-parser.appspot.com/) |
+| Lab 2 | Introduction to Yaml | [link](labs/lab2:yaml.md) |
 | Lab 3 | Pods      |    [link](labs/lab3:pods.md) |
 | Lab 4 | Deployments and Replicasets |    [link](labs/lab4:deployment.md) |
 | Lab 5 | Services      |    [link](labs/lab5:services.md) |
