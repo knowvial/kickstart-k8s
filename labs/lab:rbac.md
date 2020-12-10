@@ -1,4 +1,14 @@
 # Role based access control
+> Create a service account
+```yaml
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mysa
+automountServiceAccountToken: false
+EOF
+```
 > Create a pod that we want to control access to
 ```yaml
 cat <<EOF | kubectl apply -f -
@@ -24,7 +34,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   namespace: default
-  name: pod-reader
+  name: sa-rb-pod-reader
 rules:
 - apiGroups: [""] # "" indicates the core API group
   resources: ["pods"]
@@ -35,22 +45,23 @@ EOF
 > Create a role binding
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
-# This role binding allows "jane" to read pods in the "default" namespace.
-# You need to already have a Role named "pod-reader" in that namespace.
 kind: RoleBinding
 metadata:
-  name: read-pods
+  name: sa-rb
   namespace: default
 subjects:
-# You can specify more than one "subject"
-- kind: User
-  name: jean # "name" is case sensitive
-  apiGroup: rbac.authorization.k8s.io
+- kind: ServiceAccount
+  name: mysa
+  namespace: default
 roleRef:
-  # "roleRef" specifies the binding to a Role / ClusterRole
-  kind: Role #this must be Role or ClusterRole
-  name: pod-reader # this must match the name of the Role or ClusterRole you wish to bind to
+  kind: Role
+  name: sa-rb-pod-reader
   apiGroup: rbac.authorization.k8s.io
 ```
 
-> Get 
+> Get the private token for the service account 
+```
+TOKEN=$(kubectl describe secrets "$(kubectl describe serviceaccount default -n default| grep -i Tokens | awk '{print $2}')" -n default | grep token: | awk '{print $2}')
+```
+
+> Add the token to ~/.kube/config
