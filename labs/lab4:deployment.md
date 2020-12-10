@@ -38,7 +38,7 @@ metadata:
   labels:
     app: k8s-class
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: my-web-app
