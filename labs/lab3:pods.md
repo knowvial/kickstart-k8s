@@ -19,7 +19,7 @@ kubectl describe pod <pod-name>
 kubectl get pods <pod-name> -o yaml
 ```
 
-> Delete Pod
+> Delete the Pod
 ```
 kubectl delete pod <pod-name>
 ```
@@ -46,12 +46,12 @@ EOF
 kubectl apply -f pod.yml
 ```
 
-> Explore and delete
+> Explore
 ```
 kubectl get pods -o wide
 ```
 
-> Delete Pod
+> Delete the Pod
 ```
 kubectl delete pod <pod-name>
 ```
