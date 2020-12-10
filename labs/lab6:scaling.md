@@ -27,7 +27,7 @@ kubectl delete deploy my-web-app
 
 ## Declarative way: Manual Scaling out and in
 > Create a service manifest file
-```
+```yaml
 cat <<EOF > dep-manual-scaling.yml
 apiVersion: apps/v1
 kind: Deployment
@@ -93,7 +93,7 @@ kubectl describe node <node-name>
 ```
 
 > Create deployment with resource requests and limits
-```
+```yaml
 cat <<EOF > dep-auto-scale.yml
 apiVersion: v1
 kind: Service

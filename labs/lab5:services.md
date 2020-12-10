@@ -4,7 +4,7 @@ Please use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open the
 
 ## Create a deployment to associate with the service 
 > Create a deployment manifest with 2 replicas
-```
+```yaml
 cat <<EOF > dep.yml
 apiVersion: apps/v1
 kind: Deployment
@@ -68,7 +68,7 @@ kubectl delete svc my-web-service
 
 ## Declarative way: Create a ClusterIP service 
 > Create a service manifest file
-```
+```yaml
 cat <<EOF > service.yml
 apiVersion: v1
 kind: Service

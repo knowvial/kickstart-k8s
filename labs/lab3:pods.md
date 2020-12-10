@@ -26,7 +26,7 @@ kubectl delete pod <pod-name>
 
 ## Declarative way: create a pod
 > Create a pod manifest file.
-```
+```yaml
 cat <<EOF > pod.yml
 apiVersion: v1
 kind: Pod

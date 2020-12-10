@@ -29,7 +29,7 @@ kubectl delete deploy my-web-dep
 
 ## Declarative way: create a deployment 
 > Create a deployment manifest file
-```
+```yaml
 cat <<EOF > dep.yml
 apiVersion: apps/v1
 kind: Deployment
