@@ -5,6 +5,7 @@
 | Learn Kubernetes using Interactive Browser-Based Scenarios | By Katacoda | Interactive | [link](https://www.katacoda.com/courses/kubernetes) |
 | Kubernetes The Hard Way | Kelsey Hightower | Guided | [link](https://github.com/kelseyhightower/kubernetes-the-hard-way)|
 | Kubernetes Beginner’s Guide: Learning the basics in an hour | Anthony Chow | Intro | [link](https://www.weave.works/kubernetes-beginners-guide/) |
+| Qwiklabs | Google | Labs | [link] (https://qwiklabs.com) |
 | Kubernetes Bootcamp | Container Solutions & Remember to Play | Interactive | [link](https://kubernetesbootcamp.github.io/kubernetes-bootcamp/) |
 | Kubernetes Production Patterns | Gravitational team | Patterns |  | [link](https://github.com/gravitational/workshop/blob/master/k8sprod.md) |
 | Self-guided k8s-workshops | @ryanj  | Presentation | [link](bit.ly/k8s-workshops ) |
