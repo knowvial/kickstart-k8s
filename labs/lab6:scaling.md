@@ -147,7 +147,7 @@ kubectl apply -f dep-auto-scale.yml
 > Imperative - Horizontal pod autoscaling
 ```
 kubectl get pods -o wide
-kubectl autoscale deployment/my-web-app --min=1 --max=10 --cpu-percent=50
+kubectl autoscale deployment/my-web-dep --min=1 --max=10 --cpu-percent=50
 kubectl get hpa -w
 
 ```

@@ -13,7 +13,7 @@ metadata:
   labels:
     app: k8s-class
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: my-web-app
@@ -114,7 +114,6 @@ kubectl apply -f service2.yml
 ```
 kubectl get svc -o wide
 ```
-
 
 > Check http://<node-public-ip>:<node-port>
 > You can get "node-port" from `kubectl get svc my-web-service` "<node-port>:80"
